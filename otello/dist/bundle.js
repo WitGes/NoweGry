@@ -57,21 +57,29 @@
 	        var $container= $('<div>').attr('class','app');
 
 	        var $table=$('<table>');
-	        var $row=$('<tr>');
-	        var $cell = $('<td>');
+
+
 
 	        var size=8;
 
 	        for (var i =0;i<size;i++){
-
+	            var $row=$('<tr>');
 	            for (var j=0;j<size;j++){
-	                 $row.append($cell);
+	                var $cell = $('<td>');
+	                $row.append($cell);
+	                $cell.css({
+	                    border: '1px solid black',
+	                    width: 50,
+	                    height: 50,
+	                })
 	            }
 	            $table.append($row);
 	        }
 	        $container.append($table);
 
 	        $('body').append($container);
+
+
 
 	    });
 	};
