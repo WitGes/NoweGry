@@ -1,3 +1,1 @@
-var $ = require('jquery');
-
-$('body').append($('<div id="app">'));
+require('app/prepareAppContainer')();
